@@ -1,0 +1,25 @@
+<div class="info-container">
+    <h1>Busca</h1>
+    <app-search (sendCar)="getCar($event)"></app-search>
+    <h2>Informações</h2>
+    <span>Marca: {{car.Marca}}</span>
+    <span>Modelo: {{car.Modelo}}</span>
+    @if(car.AnoModelo == 0){
+        <span>Ano:</span>
+    }
+    @else {
+        <span>Ano: {{car.AnoModelo}}</span>
+    }
+    <span>Combutivel: {{car.Combustivel}}</span>
+    <span>Codigo Fipe: {{car.CodigoFipe}}</span>
+    <span>Mês de Ref.: {{car.MesReferencia}}</span>
+    <span>Valor: {{car.Valor}}</span>
+    @if(showCost){
+        <span>Custo aprox.: R{{apprCost}}</span>
+        <span>Valor de compra: R{{buyValue}}</span>
+    }
+    @else {
+        <span>Custo aprox.:  </span>
+        <span>Valor de compra: </span>
+    }
+</div>

@@ -1,0 +1,13 @@
+<div class="dashboard-container">
+    <div class="chart-container">
+        <div class="split">
+            <div>
+                <canvasjs-chart [options]="chartOptionsSeller" [styles]="{width: '100%', height:'360px'}" (chartInstance)="getChartInstanceSeller($event)"></canvasjs-chart>
+            </div>
+            <div>
+                <canvasjs-chart [options]="cartOptionbrand" [styles]="{width: '100%', height:'360px'}" (chartInstance)="getChartInstanceBrand($event)"></canvasjs-chart>
+            </div>
+        </div>
+        <canvasjs-chart [options]="cartOptionBnS" [styles]="{width: '100%', height:'360px'}" (chartInstance)="getChartInstanceBnS($event)"></canvasjs-chart>
+    </div>
+</div>

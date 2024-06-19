@@ -1,0 +1,45 @@
+<div class="register-container">
+    <h1>Registro</h1>
+    <app-search (sendCar)="getCar($event)" (sendData)="getData($event)" [product]="product"></app-search>
+    <form [formGroup]="form">
+        <div class="car form">
+            <label>Placa</label>
+            <input type="text" formControlName="plate">
+            <label>Renavam</label>
+            <input type="text" formControlName="renavam">
+        </div>
+        <div class="seller form">
+            <label>Nome do vendedor</label>
+            <input type="text" formControlName="sellerName">
+            <label>CPF do vendedor</label>
+            <input type="text" formControlName="sellerCPF">
+            <label>Valor de compra</label>
+            <input type="number" formControlName="buyValue">
+            <label>Data de compra</label>
+            <input type="date" formControlName="buyDate">
+            
+        </div>
+        <div class="buyer form">
+            <label>Nome do comprador</label>
+            <input type="text" formControlName="buyerName">
+            <label>CPF do comprador</label>
+            <input type="text" formControlName="buyerCPF">
+            <label>Valor de venda</label>
+            <input type="number" formControlName="sellValue">
+            <label>Data de venda</label>
+            <input type="date" formControlName="sellDate">
+        </div>
+    </form>
+    <div class="button-container">
+        <button class="remove" (click)="remove()">Excluir</button>
+        @if(update){
+            <button class='add'(click)="save()">Salvar</button>
+        }
+        @else{
+            <button class='add' (click)="register()">Registrar</button>
+        }
+    </div>
+</div>
+<app-messagebox [title]="'Mensagem'" [message]="'Produto excluido com sucesso'"(close)="alterMessageboxDelete()" [style.display]=" messageboxDelete ? 'block' : 'none'"></app-messagebox>
+<app-messagebox [title]="'Mensagem'" [message]="'Produto alterado com sucesso'"(close)="alterMessageboxUpdate()" [style.display]=" messageboxUpdate ? 'block' : 'none'"></app-messagebox>
+<app-messagebox [title]="'Mensagem'" [message]="'Produto cadastrado com sucesso'" (close)="alterMessageboxRegister()" [style.display]=" messageboxRegister ? 'block' : 'none'"></app-messagebox>

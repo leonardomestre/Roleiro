@@ -1,0 +1,65 @@
+<div class="cost-container">
+    <h1>Configurações</h1>
+    <div class="form-container">
+        <form [formGroup]="form">
+            <div class="group-container">
+                <label>Valor minimo a ganhar por venda</label>
+                <div class="input-container">
+                    <input type="number" name="profit" formControlName="profit" data-mask="000.00">
+                    <span>R$</span>
+                </div>
+                <span class="alert" [style.display]="profitAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+            </div>
+            <div class="group-container">
+                <label>Imposto</label>
+                <div class="input-container">
+                    <input type="number" name="tax" formControlName="tax">
+                    <span>%</span>
+                    <span class="alert" [style.display]="taxAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+            <div class="group-container">
+                <label>Pedágio</label>
+                <div class="input-container">
+                    <input type="number" name="toll" formControlName="toll">
+                    <span>R$</span>
+                    <span class="alert" [style.display]="tollAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+            <div class="group-container">
+                <label>Gasolina</label>
+                <div class="input-container">
+                    <input type="number" name="gasoline" formControlName="gasoline">
+                    <span>R$</span>
+                    <span class="alert" [style.display]="gasolineAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+            <div class="group-container">
+                <label>Manutenção</label>
+                <div class="input-container">
+                    <input type="number" name="maintenance" formControlName="maintenance">
+                    <span>R$</span>
+                    <span class="alert" [style.display]="maintenanceAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+            <div class="group-container">
+                <label>Transferência</label>
+                <div class="input-container">
+                    <input type="number" name="transference" formControlName="transference">
+                    <span>R$</span>
+                    <span class="alert" [style.display]="transferenceAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+            <div class="group-container">
+                <label>Outros custos</label>
+                <div class="input-container">
+                    <input type="number" name="others" formControlName="others">
+                    <span>R$</span>
+                    <span class="alert" [style.display]="othersAlert ? 'block' : 'none'">Escolha um valor maior ou igual a 0</span>
+                </div>
+            </div>
+        </form>
+        <button (click)="send()">ALTERAR</button>
+    </div>
+</div>
+<app-messagebox [title]="'Mensagem'" [message]="'Custo alterado com sucesso'"(close)="alterMessageboxUpdate()" [style.display]=" messageboxUpdate ? 'block' : 'none'"></app-messagebox>

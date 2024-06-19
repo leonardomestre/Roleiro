@@ -1,0 +1,46 @@
+.cost-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    .form-container{
+        margin:0px 20px 20px 20px;
+        .group-container{
+            margin: 10px 0px;
+            .input-container{
+                display: flex;
+                align-items: center;
+            }
+            .alert{
+                color:#dc3545
+            }
+        }
+        button{
+            cursor: pointer;
+            width: 100%;
+            background-color: #9ec5fe;
+            padding: 12px;
+            border: 1px solid #052c65;
+            border-radius: 10px;
+            &:hover{
+                background-color: #3d8bfd;
+            }
+        }
+    }
+}
+
+app-messagebox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:90vw;
+
+}
+@media (orientation: landscape){
+    app-messagebox{
+        width:auto;
+    
+    }
+}

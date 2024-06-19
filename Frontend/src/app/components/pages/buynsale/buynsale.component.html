@@ -1,0 +1,57 @@
+<div class="buynsale-container">
+    <h1>Compra e Venda</h1>
+
+    <div class="button-container">
+        <button class="add" (click)="register()">+</button>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <span>id</span>
+                    </td>
+                    <td>
+                        <span>Marca</span>
+                    </td>
+                    <td>
+                        <span>Modelo</span>
+                    </td>
+                    <td>
+                        <span>Ano</span>
+                    </td>
+                    <td>
+                        <span>Status</span>
+                    </td>
+                    <td>
+                        <span>Alterar</span>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                @for( car of cars; track cars){
+                    <tr>
+                        <td>
+                            <span>{{car.id}}</span>
+                        </td>
+                        <td>
+                            <span>{{car.brand.name}}</span>
+                        </td>
+                        <td>
+                            <span>{{car.model.name}}</span>
+                        </td>
+                        <td>
+                            <span>{{car.year.name}}</span>
+                        </td>
+                        <td>
+                            <span class="status" [class]="car.status == 'Vendido' ? 'sell' : 'buy' ">{{car.status}}</span>
+                        </td>
+                        <td (click)="register(car.id)">
+                            <img src="../../../../assets/update-icon.png" alt="update-icon">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

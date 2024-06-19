@@ -1,0 +1,22 @@
+.navigate-container{
+    display: flex;
+    height: 90px;
+    align-items: center;
+    
+    .img{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0px 20px;
+        cursor:pointer;
+        img{
+            max-width: 50px;
+        }
+    }
+    .img:hover{
+        background-color: #9ec5fe;
+    }
+    .selected{
+        background-color: #9ec5fe;
+    }
+}

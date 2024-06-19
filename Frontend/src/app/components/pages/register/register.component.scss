@@ -1,0 +1,73 @@
+.register-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.2em;
+    h1{
+        text-align: center;
+    }
+    form{
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .button-container{
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 40%;
+            padding: 10px;
+            color:#fbfbfb;
+            
+            border-radius: 10px;
+            
+        }
+        .add{
+            background-color: #198754;
+            border: 1px solid #0f5132;
+            &:hover{
+                background-color: #146c43;
+            }
+        }
+        .remove{
+            background-color: #dc3545;
+            border: 1px solid #842029;
+            &:hover{
+                background-color: #b02a37;
+            }
+        }
+    }
+}
+
+app-messagebox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:90vw;
+
+}
+@media (orientation: landscape){
+    form{
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-container{
+        justify-content: end!important;
+
+        button{
+            margin-left: 20px;
+            width: 12ch !important;
+    
+        }
+    }
+    app-messagebox{
+        width:auto;
+    
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "cost": [
+    {
+      "id": "1",
+      "profit": 0,
+      "tax": 0,
+      "toll": 0,
+      "gasoline": 0,
+      "maintenance": 0,
+      "transference": 0,
+      "others": 0
+    }
+  ],
+  "cars": [
+    
+  ]
+}

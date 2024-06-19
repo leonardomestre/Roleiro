@@ -1,0 +1,17 @@
+.info-container{
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    h1{
+        text-align: center;
+    }
+    span{
+        margin-top: 10px;
+    }
+    :last-child{
+        margin-bottom: 20px;
+    }
+}

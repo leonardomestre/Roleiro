@@ -1,0 +1,71 @@
+.buynsale-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+    .button-container{
+        align-self: flex-end;
+        display: flex;
+        justify-content: space-between;
+        button{
+            cursor: pointer;
+            box-sizing: border-box;
+            width: 45px;
+            height: 45px;
+            border-radius: 40%;
+            color:#FBFBFB;
+            font-size:1.5em;
+        }
+        .add{
+            background-color: #198754;
+            border: 1px solid #0f5132;
+            &:hover{
+                background-color: #146c43;
+            }
+        }
+    }
+    .table-container{
+        width: 100%;
+        margin-top: 20px;
+        table{
+            width: 100%;
+            tr{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #050505;
+                td{
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 10px; 
+                    padding-bottom: 10px;
+                }
+
+                .status{
+                    padding:5px;
+                    border-radius: 5px;
+                    color:#FBFBFB
+                }
+                .sell{
+                    border: 1px solid #0f5132;
+                    background-color: #198754;
+                }
+                .buy{
+                    border:1px solid #842029;
+                    background-color: #dc3545;                
+                }
+
+                img{
+                    cursor: pointer;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

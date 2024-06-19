@@ -1,0 +1,32 @@
+.header-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 0px 20px black;
+    .title-container{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid black;
+        img{
+            margin-right: 20px;
+        }
+    }
+    img{
+        max-width: 50px;
+    }
+}
+
+@media (width > 590px){
+    .header-container{
+        flex-direction: row;
+    }
+    .title-container{
+        border-bottom: none !important;
+    }
+}

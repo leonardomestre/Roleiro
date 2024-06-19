@@ -1,0 +1,40 @@
+<div class="search-container">
+    <div class="form-container">
+        <form [formGroup]="form">
+            <div class="radio-contaier">
+                <div class="input-container" >
+                    <input type="radio" name="vehicles" id="carros"value="carros" formControlName="vehicles" (click)="selectVehicle('carros')"><label for="carros">Carros</label>
+                </div>
+                <div class="input-container" >
+                    <input type="radio" name="vehicles" id="motos" value="motos" formControlName="vehicles" (click)="selectVehicle('motos')"><label for="motos">Motos</label>
+                </div>
+                <div class="input-container">
+                    <input type="radio" name="vehicles" id="caminhoes" value="caminhoes" formControlName="vehicles" (click)="selectVehicle('caminhoes')">
+                    <label for="caminhoes">Caminhões</label>
+                </div>
+            </div>
+            <div class="select-container">
+                <label>Marca</label>
+                <select name="" id="" formControlName="brand" (change)="selectModel()">
+                    @for (brand of brands;track brands){
+                        <option value="{{brand.codigo}}" >{{brand.nome}}</option>
+                    }
+                </select>
+    
+                <label>Modelo</label>
+                <select name="" id="" formControlName="model" (change)="selectYear()">
+                    @for (model of models.modelos;track models.modelos){
+                        <option value="{{model.codigo}}" >{{model.nome}}</option>
+                    }
+                </select>
+    
+                <label>Ano</label>
+                <select name="" id="" formControlName="year" (change)="selectCar()" >
+                    @for (year of years;track years){
+                        <option value="{{ year.codigo }}" >{{year.nome}}</option>
+                    }
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
